@@ -17,7 +17,13 @@
 .temp {
   font-size: 40px;
   color: white;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  padding: 10px 0;
     
+}
+.time_location h4{
+  margin-bottom: 15px;
 }
 .time_location span{
   display: inline-block;

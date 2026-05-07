@@ -1,6 +1,7 @@
 
 
 let temp_c =document.querySelector(".temp h3")
+let countryField=document.querySelector(".time_location h4")
 let city=document.querySelector(".time_location span")
 let timeField=document.querySelector(".time_location p")
 let iconField=document.querySelector(".icon img")
@@ -13,25 +14,25 @@ form.addEventListener('submit',searchLocation)
 
 let target="pakistan"
 const getApi=async(targetLocation)=>{
-  let url=`http://api.weatherapi.com/v1/current.json?key=e90ad6ac639649b4957165616260705&q=${targetLocation}&aqi=yes`
+  let url = `http://api.weatherapi.com/v1/current.json?key=e90ad6ac639649b4957165616260705&q=${targetLocation}&aqi=yes`;
 
-  let res=await fetch(url)
-  const data=await res.json()
+  let res = await fetch(url);
+  const data = await res.json();
   console.log(data);
-  let temp=data.current.temp_c
-  let cityName=data.location.name
-  let date_time=data.location.localtime
-  console.log(date_time)
-  let icon=data.current.condition.icon
-  console.log("https:"+icon)
-  let text=data.current.condition.text
+  let temp = data.current.temp_c;
+  let country=data.location.country
+  let cityName = data.location.name;
+  let date_time = data.location.localtime;
+  console.log(date_time);
+  let icon = data.current.condition.icon;
+  console.log("https:" + icon);
+  let text = data.current.condition.text;
 
-  updateDetails(temp,cityName,date_time,icon,text)
-
-
+  updateDetails(temp, country ,cityName, date_time, icon, text);
 }
-function updateDetails(temp ,cityName,date_time ,icon,text){
+function updateDetails(temp ,country,cityName,date_time ,icon,text){
   temp_c.innerText = temp + "°C";
+  countryField.innerText=country
   city.innerText=cityName
   timeField.innerText=date_time
   iconField.src = "https:" + icon;
