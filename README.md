@@ -46,7 +46,7 @@ weather-app/
 1. Clone the repository
 
 ```bash
-[git clone https://github.com/your-username/weather-app.git](https://github.com/nh0105912/Weather-app)
+git clone :https://github.com/nh0105912/Weather-app
 ```
 
 2. Open the project folder
@@ -76,7 +76,7 @@ https://www.weatherapi.com/
 
 
 ```bash
-<img width="1015" height="605" alt="image" src="https://github.com/user-attachments/assets/44402931-5c1c-4582-b0ec-bd4dcb7f6397" />
+/screenshots.png
 
 ```
 
